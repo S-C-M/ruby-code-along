@@ -1,5 +1,6 @@
 require_relative 'config/environment'
 
+
 class App < Sinatra::Base
   
   get '/' do
@@ -11,7 +12,8 @@ class App < Sinatra::Base
       name: "#{params["fname"]} #{params["lname"]}",
       profile_pic_url: "#{params["picurl"]}"
       }
-    erb :results
+    erb :dashboard
   end
+    
   
 end

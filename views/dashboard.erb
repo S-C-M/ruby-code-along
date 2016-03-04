@@ -4,7 +4,19 @@
             <header class="block">
                 <ul class="header-menu horizontal-list">
                     <li>
-                        <a class="header-menu-tab" href="#1"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
+                      <div class="dropup">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon entypo-cog scnd-font-color"></span>
+    Settings
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
                     </li>
                     <li>
                         <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
@@ -18,9 +30,9 @@
                     </li>
                 </ul>
                 <div class="profile-menu">
-                    <p>Me <a href="#26"><span class="entypo-down-open scnd-font-color"></span></a></p>
+                    <p><%=@user[:name]%><a href="#26"><span class="entypo-down-open scnd-font-color"></span></a></p>
                     <div class="profile-picture small-profile-picture">
-                        <img width="40px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg">
+                        <img width="40px" src="<%=@user[:profile_pic_url]%>">
                     </div>
                 </div>
             </header>
@@ -123,17 +135,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="media block"> <!-- MEDIA (LEFT-CONTAINER) -->
+                 <!-- MEDIA (LEFT-CONTAINER) -->
                     <div id="media-display">
-                        <a class="media-btn play" href="#23"><span class="fontawesome-play"></span></a>
-                    </div>
-                    <div class="media-control-bar">
-                        <a class="media-btn play" href="#23"><span class="fontawesome-play scnd-font-color"></span></a>
-                        <p class="time-passed">4:15 <span class="time-duration scnd-font-color">/ 9:23</span></p>
-                        <a class="media-btn volume" href="#24"><span class="fontawesome-volume-up scnd-font-color"></span></a>
-                        <a class="media-btn resize" href="#25"><span class="fontawesome-resize-full scnd-font-color"></span></a>
-                    </div>
-                </div>
+                        <iframe width="270" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>                 
+
                 <ul class="social horizontal-list block"> <!-- SOCIAL (LEFT-CONTAINER) -->
                     <li class="facebook"><p class="icon"><span class="zocial-facebook"></span></p><p class="number">248k</p></li>
                     <li class="twitter"><p class="icon"><span class="zocial-twitter"></span></p><p class="number">30k</p></li>
@@ -147,9 +153,9 @@
                 <div class="profile block"> <!-- PROFILE (MIDDLE-CONTAINER) -->
                     <a class="add-button" href="#28"><span class="icon entypo-plus scnd-font-color"></span></a>
                     <div class="profile-picture big-profile-picture clear">
-                        <img width="150px" alt="Anne Hathaway picture" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Anne_Hathaway_Face.jpg" >
+                        <img width="150px" src="<%=@user[:profile_pic_url]%>">
                     </div>
-                    <h1 class="user-name">Anne Hathaway</h1>
+                    <h1 class="user-name"><%=@user[:name]%></h1>
                     <div class="profile-description">
                         <p class="scnd-font-color">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
                     </div>
@@ -244,8 +250,8 @@
                     </div>
                     <a class="sign-in button" href="#22">SIGN IN</a>
                     <p class="scnd-font-color">Forgot Password?</p>
-                    <a class="fb-sign-in" href="58">
-                        <p><span class="fb-border"><span class="icon zocial-facebook"></span></span>Sign in with Facebook</p>
+                    <a class="fb-sign-in" href="https://www.facebook.com/login">
+                       <p><span class="fb-border"><span class="icon zocial-facebook"></span></span>Sign in with Facebook</p>
                     </a>
                 </div>
                 <div class="loading block"> <!-- LOADING (RIGHT-CONTAINER) -->
@@ -268,7 +274,7 @@
                 <div class="calendar-month block"> <!-- CALENDAR MONTH (RIGHT-CONTAINER) -->
                     <div class="arrow-btn-container">
                         <a class="arrow-btn left" href="#202"><span class="icon fontawesome-angle-left"></span></a>
-                        <h2 class="titular">APRIL 2013</h2>
+                        <h2 class="titular">March 2016</h2>
                         <a class="arrow-btn right" href="#203"><span class="icon fontawesome-angle-right"></span></a>
                     </div>
                     <table class="calendar">

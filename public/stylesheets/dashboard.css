@@ -38,8 +38,8 @@
 	line-height: 1;
 
 	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	-webkitfont-: antialiased;
+	-mozosxfont-: grayscale;
 }
 .icon-cloudy:before {
 	content: "\e60f";
@@ -239,7 +239,8 @@ h1, h2, p, a, span{
 	font-family: 'Ubuntu', sans-serif;
 	width: 950px;
 	height: 1725px;
-	margin: 6em auto;
+	margin-left: 50%;
+  margin-top: 30%;
 }	
 	/*********************************************** HEADER ***********************************************/
 	header {
