@@ -4,19 +4,7 @@
             <header class="block">
                 <ul class="header-menu horizontal-list">
                     <li>
-                      <div class="dropup">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon entypo-cog scnd-font-color"></span>
-    Settings
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+  <a class="header-menu-tab" href="#1"><span class="icon entypo-cog scnd-font-color"></span>Settings</a>
                     </li>
                     <li>
                         <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Account</a>
@@ -68,7 +56,7 @@
                         <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
                         <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
                         <!-- END DONUT-CHART by @kseso http://codepen.io/Kseso/pen/phiyL -->    
-                        <p class="center-date">JUNE<br><span class="scnd-font-color">2013</span></p> 
+                        <p class="center-date"><%=@user[:month]%><br><span class="scnd-font-color"><%=@user[:year]%></span></p> 
                     </div>
                     <ul class="os-percentages horizontal-list">
                         <li>
@@ -122,15 +110,15 @@
                     </ul>
                     <ul class="month-data clear">
                         <li>
-                            <p>APR<span class="scnd-font-color"> 2013</span></p>
+                            <p>APR<span class="scnd-font-color"> <%=@user[:year]%></span></p>
                             <p><span class="entypo-plus increment"> </span>21<sup>%</sup></p>
                         </li>
                         <li>
-                            <p>MAY<span class="scnd-font-color"> 2013</span></p>
+                            <p>MAY<span class="scnd-font-color"> <%=@user[:year]%></span></p>
                             <p><span class="entypo-plus increment"> </span>48<sup>%</sup></p>
                         </li>
                         <li>
-                            <p>JUN<span class="scnd-font-color"> 2013</span></p>
+                            <p>JUN<span class="scnd-font-color"> <%=@user[:year]%></span></p>
                             <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
                         </li>
                     </ul>
@@ -157,7 +145,7 @@
                     </div>
                     <h1 class="user-name"><%=@user[:name]%></h1>
                     <div class="profile-description">
-                        <p class="scnd-font-color">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+                        <p class="scnd-font-color"><%=@user[:mood]%></p>
                     </div>
                     <ul class="profile-options horizontal-list">
                         <li><a class="comments" href="#40"><p><span class="icon fontawesome-comment-alt scnd-font-color"></span>23</p></a></li>
@@ -166,9 +154,9 @@
                     </ul>
                 </div>
                 <div class="weather block clear"> <!-- WEATHER (MIDDLE-CONTAINER) -->
-                    <h2 class="titular"><span class="icon entypo-location"></span><strong>CLUJ-NAPOCA</strong>/RO</h2>
+                    <h2 class="titular"><span class="icon entypo-location"></span><strong><%=@user[:city]%></strong>/<%=@user[:country]%></h2>
                     <div class="current-day">
-                        <p class="current-day-date">FRI 29/06</p>
+                        <p class="current-day-date"><%=@user[:month]%> <%=@user[:day_number]%>, <%=@user[:day]%></p>
                         <p class="current-day-temperature">24º<span class="icon-cloudy"></span></p>
                     </div>
                     <ul class="next-days">
@@ -222,9 +210,9 @@
                     </div>
                 </div> 
                 <ul class="social block"> <!-- SOCIAL (MIDDLE-CONTAINER) -->
-                    <li><a href="#50"><div class="facebook icon"><span class="zocial-facebook"></span></div><h2 class="facebook titular">SHARE TO FACEBOOK</h2></a></li>
-                    <li><a href="#51"><div class="twitter icon"><span class="zocial-twitter"></span></div><h2 class="twitter titular">SHARE TO TWITTER</h2></a></li>
-                    <li><a href="#52"><div class="googleplus icon"><span class="zocial-googleplus"></span></div><h2 class="googleplus titular">SHARE TO GOOGLE+</h2></a></li>
+                    <li><a href="https://www.facebook.com/login"><div class="facebook icon"><span class="zocial-facebook"></span></div><h2 class="facebook titular">SHARE TO FACEBOOK</h2></a></li>
+                    <li><a href="https://twitter.com/intent/tweet"><div class="twitter icon"><span class="zocial-twitter"></span></div><h2 class="twitter titular">SHARE TO TWITTER</h2></a></li>
+                    <li><a href="https://plus.google.com/share?url={URL}"><div class="googleplus icon"><span class="zocial-googleplus"></span></div><h2 class="googleplus titular">SHARE TO GOOGLE+</h2></a></li>
                 </ul>
             </div>
 
@@ -249,7 +237,7 @@
                         <div class="input-icon password-icon"><span class="fontawesome-lock scnd-font-color"></span></div>
                     </div>
                     <a class="sign-in button" href="#22">SIGN IN</a>
-                    <p class="scnd-font-color">Forgot Password?</p>
+                  <a href="https://www.hr360.com/password.aspx"><p class="scnd-font-color">Forgot Password?</p></a>
                     <a class="fb-sign-in" href="https://www.facebook.com/login">
                        <p><span class="fb-border"><span class="icon zocial-facebook"></span></span>Sign in with Facebook</p>
                     </a>
@@ -265,16 +253,16 @@
                 <div class="calendar-day block"> <!-- CALENDAR DAY (RIGHT-CONTAINER) -->
                     <div class="arrow-btn-container">
                         <a class="arrow-btn left" href="#200"><span class="icon fontawesome-angle-left"></span></a>
-                        <h2 class="titular">WEDNESDAY</h2>
+                        <h2 class="titular"><%=@user[:day]%></h2>
                         <a class="arrow-btn right" href="#201"><span class="icon fontawesome-angle-right"></span></a>
                     </div>
-                        <p class="the-day">26</p>
+                        <p class="the-day"><%=@user[:day_number]%></p>
                         <a class="add-event button" href="#27">ADD EVENT</a>
                 </div>
                 <div class="calendar-month block"> <!-- CALENDAR MONTH (RIGHT-CONTAINER) -->
                     <div class="arrow-btn-container">
                         <a class="arrow-btn left" href="#202"><span class="icon fontawesome-angle-left"></span></a>
-                        <h2 class="titular">March 2016</h2>
+                        <h2 class="titular"><%=@user[:month]%> <%=@user[:year]%></h2>
                         <a class="arrow-btn right" href="#203"><span class="icon fontawesome-angle-right"></span></a>
                     </div>
                     <table class="calendar">
@@ -297,47 +285,47 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td><a class="scnd-font-color" href="#100">1</a></td>
+                                <td><a href="#100">1</a></td>
                             </tr>
                             <tr>
-                                <td><a class="scnd-font-color" href="#101">2</a></td>
-                                <td><a class="scnd-font-color" href="#102">3</a></td>
-                                <td><a class="scnd-font-color" href="#103">4</a></td>
-                                <td><a class="scnd-font-color" href="#104">5</a></td>
-                                <td><a class="scnd-font-color" href="#105">6</a></td>
-                                <td><a class="scnd-font-color" href="#106">7</a></td>
-                                <td><a class="scnd-font-color" href="#107">8</a></td>
+                                <td><a href="#101">2</a></td>
+                                <td><a href="#102">3</a></td>
+                                <td><a href="#103">4</a></td>
+                                <td><a href="#104">5</a></td>
+                                <td><a href="#105">6</a></td>
+                                <td><a href="#106">7</a></td>
+                                <td><a href="#107">8</a></td>
                             </tr>
                             <tr>
-                                <td><a class="scnd-font-color" href="#108">9</a></td>
-                                <td><a class="scnd-font-color" href="#109">10</a></td>
-                                <td><a class="scnd-font-color" href="#110">11</a></td>
-                                <td><a class="scnd-font-color" href="#111">12</a></td>
-                                <td><a class="scnd-font-color" href="#112">13</a></td>
-                                <td><a class="scnd-font-color" href="#113">14</a></td>
-                                <td><a class="scnd-font-color" href="#114">15</a></td>
+                                <td><a href="#108">9</a></td>
+                                <td><a href="#109">10</a></td>
+                                <td><a href="#110">11</a></td>
+                                <td><a href="#111">12</a></td>
+                                <td><a href="#112">13</a></td>
+                                <td><a href="#113">14</a></td>
+                                <td><a href="#114">15</a></td>
                             </tr>
                             <tr>
-                                <td><a class="scnd-font-color" href="#115">16</a></td>
-                                <td><a class="scnd-font-color" href="#116">17</a></td>
-                                <td><a class="scnd-font-color" href="#117">18</a></td>
-                                <td><a class="scnd-font-color" href="#118">19</a></td>
-                                <td><a class="scnd-font-color" href="#119">20</a></td>
-                                <td><a class="scnd-font-color" href="#120">21</a></td>
-                                <td><a class="scnd-font-color" href="#121">22</a></td>
+                                <td><a href="#115">16</a></td>
+                                <td><a href="#116">17</a></td>
+                                <td><a href="#117">18</a></td>
+                                <td><a href="#118">19</a></td>
+                                <td><a href="#119">20</a></td>
+                                <td><a href="#120">21</a></td>
+                                <td><a href="#121">22</a></td>
                             </tr>
                             <tr>
-                                <td><a class="scnd-font-color" href="#122">23</a></td>
-                                <td><a class="scnd-font-color" href="#123">24</a></td>
-                                <td><a class="scnd-font-color" href="#124">25</a></td>
-                                <td><a class="today" href="#125">26</a></td>
+                                <td><a href="#122">23</a></td>
+                                <td><a href="#123">24</a></td>
+                                <td><a href="#124">25</a></td>
+                                <td><a href="#125">26</a></td>
                                 <td><a href="#126">27</a></td>
                                 <td><a href="#127">28</a></td>
                                 <td><a href="#128">29</a></td>
                             </tr>
                             <tr>
                                 <td><a href="#129">30</a></td>
-                                <td></td>
+                                <td><a href="#130">31</a></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>

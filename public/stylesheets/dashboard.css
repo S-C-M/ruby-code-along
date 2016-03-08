@@ -98,33 +98,37 @@ h1, h2, p, a, span{
 .input-container {
 	position: relative;
 }
-	input[type=text]{
-		width: 260px;
-		height: 50px;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		padding-left: 45px;
-		background: #50597b;
-		color: #fff;
-		border: solid 1px #1f253d;
-		border-radius: 5px;		
-	}
-		input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
-	   		color: #fff;	   		
-	   	}
-		input[type=text]:-moz-input-placeholder { /* Mozilla Firefox 4 to 18 */
-	   		color: #fff;	   
-	   	}
-		input[type=text]::-moz-input-placeholder { /* Mozilla Firefox 19+ */
-	   		color: #fff;
-	   	}
-		input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
-	   		color: #fff;	   	
-	   	}
-	   	input[type=text]:focus {
-	   		outline: none; /* removes the default orange border when focus */
-	   		border: 1px solid #11a8ab;
-	   	}
+
+input[type=text]{
+	width: 235px;
+	height: 50px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding-left: 45px;
+	background: #50597b;
+	color: #fff;
+	border: solid 1px #1f253d;
+	border-radius: 5px;		
+}
+
+input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+  color: #fff;	   		
+}
+
+input[type=text]:-moz-input-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #fff;	   
+}
+
+input[type=text]::-moz-input-placeholder { /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10+ */
+	  		color: #fff;	   	
+	  	}
+	  	input[type=text]:focus {
+	  		outline: none; /* removes the default orange border when focus */
+	  		border: 1px solid #11a8ab;
+	  	}
 	.input-icon {
 		font-size: 22px;
 		position: absolute;
@@ -464,7 +468,7 @@ h1, h2, p, a, span{
 					padding-top: 36px;
 				}
         .os-percentages li {
-					width: 75px;
+					width: 67.5px;
 					border-left: 1px solid #394264;
 					text-align: center;					
 					background: #50597b;
@@ -667,7 +671,7 @@ h1, h2, p, a, span{
 				height: 110px;
 			}
 				.left-container .social li {
-					width: 75px;
+					width: 67.5px;
 					height: 110px;										
 				}
 					.left-container .social li .icon {
@@ -755,7 +759,7 @@ h1, h2, p, a, span{
 						}
 						.profile-options a {
 							display: block;					
-							width: 99px;
+							width: 89px;
 							line-height: 60px;
 							text-align: center;
 							-webkit-transition: background .3s;
